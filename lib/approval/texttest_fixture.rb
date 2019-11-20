@@ -1,8 +1,7 @@
 #!/usr/bin/ruby -w
 
-require File.join(File.dirname(__FILE__), 'gilded_rose')
+require_relative '../gilded_rose'
 
-puts "OMGHAI!"
 items = [
   Item.new(name="+5 Dexterity Vest", sell_in=10, quality=20),
   Item.new(name="Aged Brie", sell_in=2, quality=0),
@@ -21,13 +20,15 @@ if ARGV.size > 0
   days = ARGV[0].to_i + 1
 end
 
+file = File.open("./lib/approval/CurrentFile.txt", "w")
 gilded_rose = GildedRose.new items
 (0...days).each do |day|
-  puts "-------- day #{day} --------"
-  puts "name, sellIn, quality"
+  file.puts "-------- day #{day} --------"
+  file.puts "name, sellIn, quality"
   items.each do |item|
-    puts item
+    file.puts item
   end
-  puts ""
+  file.puts ""
   gilded_rose.update_quality
 end
+file.close
