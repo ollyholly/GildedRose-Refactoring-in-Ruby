@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+require_relative 'aged_item'
+
+class BackstageItem < AgedItem
+  def accelerate
+    self.quality += 1 if self.sell_in <= 10
+    self.quality += 1 if self.sell_in <= 5
+  end
+
+  def drop_quality
+    self.quality = 0 if self.sell_in < 0
+  end
+end
