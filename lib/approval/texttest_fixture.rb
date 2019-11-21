@@ -1,6 +1,5 @@
 #!/usr/bin/ruby -w
 # frozen_string_literal: true
-
 require_relative '../gilded_rose'
 
 items = [
@@ -12,8 +11,7 @@ items = [
   Item.new(name = 'Backstage passes to a TAFKAL80ETC concert', sell_in = 15, quality = 20),
   Item.new(name = 'Backstage passes to a TAFKAL80ETC concert', sell_in = 10, quality = 49),
   Item.new(name = 'Backstage passes to a TAFKAL80ETC concert', sell_in = 5, quality = 49),
-  # This Conjured item does not work properly yet
-  Item.new(name = 'Conjured Mana Cake', sell_in = 3, quality = 6) # <-- :O
+  Item.new(name = 'Conjured Mana Cake', sell_in = 3, quality = 6)
 ]
 
 days = 2
@@ -22,11 +20,11 @@ if ARGV.size > 0
 end
 
 file = File.open('./lib/approval/CurrentFile.txt', 'w')
-gilded_rose = GildedRose.new items
-(0...days).each do |day|
+gilded_rose = GildedRose.new(items)
+(0...2).each do |day|
   file.puts "-------- day #{day} --------"
   file.puts 'name, sellIn, quality'
-  items.each do |item|
+  gilded_rose.items.each do |item|
     file.puts item
   end
   file.puts ''

@@ -15,15 +15,18 @@ class Classifier
     "Backstage": BackstageItem
   }
 
+  def fetch_class(item)
+    TYPES.each_key do |type|
+      return TYPES[type] if item.name.include?(type.to_s)
+    end
+    return RegularItem
+  end
+
   def sort_classes(items)
     sorted_items = []
     items.each do |item|
-      TYPES.each_key do |type|
-        if item.name.include?(type.to_s)
-          sorted_items << TYPES[type].new(item.name, item.sell_in, item.quality)
-        end
-      end
-      sorted_items << RegularItem.new(item.name, item.sell_in, item.quality)
+      klass = fetch_class(item)
+      sorted_items << klass.new(item.name, item.sell_in, item.quality)
     end
     sorted_items
   end

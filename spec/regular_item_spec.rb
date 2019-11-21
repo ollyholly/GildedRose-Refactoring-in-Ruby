@@ -1,14 +1,7 @@
 # frozen_string_literal: true
-
 require 'regular_item'
 
 describe RegularItem do
-  #   context 'All items' do
-  #     it 'The Quality of an item is never more than 50' do
-  #       items = [Item.new('Elixir of the Mongoose', 4, 0)]
-  #       GildedRose.new(items).update_quality
-  #       expect(items[0].quality).to eq 0
-  #     end
 
   describe '#update' do
     it 'each day reduce the quality & sellin date by 1' do

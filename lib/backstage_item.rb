@@ -9,6 +9,7 @@ class BackstageItem < AgedItem
   end
 
   def drop_quality
+    super
     self.quality = 0 if self.sell_in < 0
   end
 end
