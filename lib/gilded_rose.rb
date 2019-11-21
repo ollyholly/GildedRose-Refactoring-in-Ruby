@@ -32,7 +32,8 @@ class GildedRose
           end
         end
       end
-#++++++REGULAR SELLIN UPDATE++++++
+#++++++SELLIN UPDATE++++++
+# REGULAR SELLIN UPDATE
       if item.name != 'Sulfuras, Hand of Ragnaros'
         item.sell_in = item.sell_in - 1
       end
