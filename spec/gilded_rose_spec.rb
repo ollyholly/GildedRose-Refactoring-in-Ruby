@@ -4,7 +4,6 @@ require 'gilded_rose'
 
 describe GildedRose do
   describe '#update_quality' do
-
     context 'All items' do
       it 'At the end of each day SellIn decreases by 1' do
         items = [Item.new('Elixir of the Mongoose', 4, 6)]
@@ -18,7 +17,7 @@ describe GildedRose do
         rose.update_quality
         expect(rose.items[0].quality).to eq 5
       end
-      
+
       it 'The Quality of an item is never negative' do
         items = [Item.new('Elixir of the Mongoose', 4, 0)]
         rose = GildedRose.new(items)
@@ -42,14 +41,13 @@ describe GildedRose do
     end
 
     context 'Sulfurus' do
-      
       it 'Sellin date of Sulfuras never changes' do
         items = [Item.new('Sulfuras, Hand of Ragnaros', 0, 80)]
         rose = GildedRose.new(items)
         rose.update_quality
         expect(rose.items[0].sell_in).to eq 0
       end
-      
+
       it 'Quality of Sulfuras never decreases' do
         items = [Item.new('Sulfuras, Hand of Ragnaros', 0, 80)]
         rose = GildedRose.new(items)

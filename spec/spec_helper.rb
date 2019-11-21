@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'simplecov'
 require 'simplecov-console'
 
@@ -20,8 +21,8 @@ SimpleCov.start
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-Dir[File.join(File.dirname(__FILE__), '../lib/**/*.rb')].each do
-  |file| require file
+Dir[File.join(File.dirname(__FILE__), '../lib/**/*.rb')].each do |file|
+  require file
 end
 
 RSpec.configure do |config|

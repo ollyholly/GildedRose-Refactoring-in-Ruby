@@ -1,8 +1,8 @@
 # frozen_string_literal: true
+
 require 'regular_item'
 
 describe RegularItem do
-
   describe '#update' do
     it 'each day reduce the quality & sellin date by 1' do
       item = RegularItem.new('Elixir of the Mongoose', 4, 6)

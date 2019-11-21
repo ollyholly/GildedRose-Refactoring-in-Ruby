@@ -13,12 +13,6 @@ items = [
   Item.new(name = 'Backstage passes to a TAFKAL80ETC concert', sell_in = 5, quality = 49),
   Item.new(name = 'Conjured Mana Cake', sell_in = 3, quality = 6)
 ]
-
-days = 2
-if ARGV.size > 0
-  days = ARGV[0].to_i + 1
-end
-
 file = File.open('./lib/approval/CurrentFile.txt', 'w')
 gilded_rose = GildedRose.new(items)
 (0...2).each do |day|

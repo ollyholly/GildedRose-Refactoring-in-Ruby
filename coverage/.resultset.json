@@ -128,19 +128,21 @@
         null,
         null,
         1,
+        37,
+        37,
+        53,
+        53,
+        null,
+        37,
+        null,
+        null,
+        1,
+        null,
+        1,
         53,
         159,
         null,
         13,
-        null,
-        null,
-        1,
-        37,
-        37,
-        53,
-        53,
-        null,
-        37,
         null,
         null
       ],
@@ -156,7 +158,6 @@
       "/Users/student/Google Drive/Coding/Makers/Week10/GildedRose-Refactoring-in-Ruby/lib/approval/texttest_fixture.rb": [
         null,
         null,
-        null,
         1,
         null,
         null,
@@ -168,12 +169,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
         null,
         null,
         1,
@@ -499,6 +494,6 @@
         null
       ]
     },
-    "timestamp": 1574373789
+    "timestamp": 1574373982
   }
 }

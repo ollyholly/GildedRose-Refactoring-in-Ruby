@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'classifier'
 require_relative 'item'
 
@@ -12,9 +13,7 @@ class GildedRose
 
   def update_quality
     sorted_items = classifier.sort_classes(@items)
-    sorted_items.each do |item|
-      item.update
-    end
+    sorted_items.each(&:update)
     self.items = sorted_items
   end
 end
