@@ -17,7 +17,9 @@ items = [
 ]
 
 days = 2
-days = ARGV[0].to_i + 1 unless ARGV.empty?
+if ARGV.size > 0
+  days = ARGV[0].to_i + 1
+end
 
 file = File.open('./lib/approval/CurrentFile.txt', 'w')
 gilded_rose = GildedRose.new items

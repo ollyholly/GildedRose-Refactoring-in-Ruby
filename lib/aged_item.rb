@@ -4,8 +4,10 @@ require_relative 'regular_item'
 
 class AgedItem < RegularItem
   def update_quality
-    self.quality += 1
-    accelerate
+    if self.quality < 50
+      self.quality += 1
+      accelerate 
+    end
     drop_quality
   end
 
