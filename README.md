@@ -35,6 +35,7 @@ items = [
 
 4. Run `gilded_rose = GildedRose.new(items)`
 5. Run `gilded_rose.update_quality to update the items for a given day.
+<br><br>
 
 ## Tests
 
@@ -46,6 +47,7 @@ rake
 
 **Test coverate**
 ![Test Coverage](./public/img/coverage.png)
+<br><br>
 
 ## Approach
 
