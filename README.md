@@ -35,7 +35,7 @@ items = [
 
 4. Run `gilded_rose = GildedRose.new(items)`
 5. Run `gilded_rose.update_quality to update the items for a given day.
-<br><br>
+   <br><br>
 
 ## Tests
 
@@ -49,25 +49,7 @@ rake
 ![Test Coverage](./public/img/coverage.png)
 <br><br>
 
-## Approach
-
-Every class has a single responsibility that can be described with one sentence:
-
-**GildedRose** is the main interface for interaction with the bank account.
-
-**Classifier** stores transaction details(date, credit, debit, balance).
-
-**Item** records and formats the date of transaction.
-
-**RegularItem** formats transaction history into a printable format.
-
-**LegendaryItem** formats transaction history into a printable format.
-
-**AgedItem** formats transaction history into a printable format.
-
-**ConjuredItem** formats transaction history into a printable format.
-
-**BackstageItem** formats transaction history into a printable format.
+## Diagram
 
 ![Domain Model](./public/img/uml.png)
 
