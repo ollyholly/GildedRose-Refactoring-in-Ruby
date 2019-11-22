@@ -18,7 +18,7 @@ gilded_rose = GildedRose.new(items)
 (0...2).each do |day|
   file.puts "-------- day #{day} --------"
   file.puts 'name, sellIn, quality'
-  gilded_rose.items.each do |item|
+  items.each do |item|
     file.puts item
   end
   file.puts ''
