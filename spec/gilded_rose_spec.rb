@@ -118,7 +118,7 @@ describe GildedRose do
         rose = GildedRose.new(items)
         rose.update_quality
         expect(rose.items[0].quality).to eq 0
-        expect(rose.items[0].sell_in).to eq -1
+        expect(rose.items[0].sell_in).to eq(-1)
       end
     end
   end

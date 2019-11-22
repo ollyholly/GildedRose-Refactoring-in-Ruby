@@ -1,4 +1,3 @@
-
 # The behavior of RuboCop can be controlled via the .rubocop.yml
 # configuration file. It makes it possible to enable/disable
 # certain cops (checks) and to alter their behavior if they accept
@@ -14,9 +13,10 @@ AllCops:
     # This code was taken from the backports gem. We don't want to mess with it.
     - lib/rspec/spec/spec_helper.rb
     - "lib/approval/texttest_fixture.rb"
+    - "gilded_rose_legacy.rb"
 Metrics/BlockLength:
   Exclude:
-    - 'spec/*.rb'
+    - "spec/*.rb"
 # This should go down over time.
 Metrics/ClassLength:
   Max: 330
@@ -85,18 +85,6 @@ Style/RaiseArgs:
     - lib/rspec/core/hooks.rb
     - lib/rspec/core/option_parser.rb
     - lib/rspec/core/pending.rb
-Performance/RedundantBlockCall:
-  Exclude:
-    - lib/rspec/core/rake_task.rb
 Lint/IneffectiveAccessModifier:
   Exclude:
     - lib/rspec/core/memoized_helpers.rb # Fixing this file was too much of a diff
-Performance/Caller:
-  Exclude:
-    # The suggested fix for this cop only works on more recent rubies. The
-    # speed up can be substantial (previous optimization work I've done on
-    # RSpec involved caller optimization) but I haven't benchmarked this
-    # particular case to see if it's worth introducing version branching.
-    - 'lib/rspec/core/example_group.rb'
-Metrics/BlockLength:
-  Max: 193
